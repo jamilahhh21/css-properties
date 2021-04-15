@@ -54,6 +54,44 @@
             margin: auto;
             text-align: center;
         }
+
+        div.static {
+            position: static;
+            border: 3px solid orangered;
+        }
+
+        div.relative {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            border: 3px solid gold;
+        }
+
+        div.absolute {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 3px solid purple;
+        }
+
+        div.fixed {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            border: 3px solid crimson;
+        }
+
+        div.sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            padding: 5px;
+            background-color: #cae8ca;
+            border: 2px solid blue;
+        }
     </style>
 </head>
 
@@ -62,7 +100,6 @@
     <p class="center large">POLITEKNIK TUANKU SYED SIRAJUDDIN</p>
     <h1 class="center">JAMILAH BT IBRAHIM</h1>
     <p class="center">18DDT19F1024</p>
-    <div class="bordered">Diploma Digital Technology</div>
     <h2>Web Design:</h2>
 
     <table align="center">
@@ -78,7 +115,14 @@
             <td align="center">Properties</td>
             <td align="center">15/4/2021</td>
         </tr>
-    </table>
+    </table><br><br>
+    <div class="bordered">Diploma Digital Technology</div><br><br>
+    <div class="static">This div element has position: static;</div><br><br>
+    <div class="relative">This div element has position: relative;
+        <div class="absolute">This div element has position: absolute;</div>
+    </div><br><br>
+    <div class="sticky">I am sticky!</div><br><br>
+    <div class="fixed">This div element has position: fixed;</div>
 </body>
 
 </html>
