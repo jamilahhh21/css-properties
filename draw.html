@@ -9,35 +9,80 @@
     <style>
         * {
             background-color: peachpuff;
+            font-size: 150%;
+        }
+
+        .star-six {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid red;
+            position: relative;
+        }
+
+        .star-six:after {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 100px solid red;
+            position: absolute;
+            content: "";
+            top: 30px;
+            left: -50px;
+        }
+
+        .star-five {
+            margin: 50px 0;
+            position: relative;
+            display: block;
+            color: red;
+            width: 0px;
+            height: 0px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid red;
+            border-left: 100px solid transparent;
+            transform: rotate(35deg);
+        }
+
+        .star-five:before {
+            border-bottom: 80px solid red;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: -45px;
+            left: -65px;
+            display: block;
+            content: '';
+            transform: rotate(-35deg);
+        }
+
+        .star-five:after {
+            position: absolute;
+            display: block;
+            color: red;
+            top: 3px;
+            left: -105px;
+            width: 0px;
+            height: 0px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid red;
+            border-left: 100px solid transparent;
+            transform: rotate(-70deg);
+            content: '';
         }
     </style>
 </head>
 
 <body>
-    <h1>DRAWING CIRCLE, LINE & TEXT</h1>
-    <canvas id="myCanvas" width="550" height="350" style="border:5px solid purple;">
-        your browser does not support the HTML canvas tag.</canvas>
+    <p>This is a star-six point and five-point</p>
+    <h1 class="star-six"></h1><br><br>
+    <h2 class="star-five"></h2>
+    
 
-    <script>
-        var c = document.getElementById("myCanvas");
-        var ctx = c.getContext("2d");
-        ctx.beginPath();
-        ctx.arc(90, 50, 40, 0, 2 * Math.PI);
-        ctx.stroke();
-    </script>
-    <script>
-        var c = document.getElementById("myCanvas");
-        var ctx = c.getContext("2d");
-        ctx.font = "30px Arial";
-        ctx.fillText("Welcome to the World", 90, 250);
-    </script>
-    <script>
-        var c = document.getElementById("myCanvas");
-        var ctx = c.getContext("2d");
-        ctx.moveTo(0,0);
-        ctx.lineTo(550,350);
-        ctx.stroke();
-        </script>
 
 </body>
 
